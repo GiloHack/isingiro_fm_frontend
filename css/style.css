@@ -1,0 +1,215 @@
+@import url("https://ulinkwebsite.com/css/keith-core.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;1,100&family=Nanum+Gothic:wght@400;700;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@300;400;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+:root{
+    --primary:purple;
+    --secondary:orange;
+    --black:rgb(6, 4, 24);
+    --dark:rgb(23, 26, 34);
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins';
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body, html{
+    background:var(--black)
+}
+.scaffold{
+    height:100vh;
+    display: grid;
+    grid-template-rows: 10% 60% 30%;
+}
+.scaffold .appbar{
+    padding:1em;
+    box-shadow:  0 0 10px rgba(0,0,0,.16);
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+    background-color:var(--dark)
+}
+.appbar marquee.appbar-text{
+    color:white;
+    font-size: 1.5em;
+    width:50%
+}
+.scaffold .banner{
+    background:url(https://th.bing.com/th/id/R.16b8aa1937a07537c88f85a15c7d7179?rik=BydOtY%2fQriiHxQ&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner .banner-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1em;
+    height:100%;
+    background:rgba(11, 11, 37, 0.5);
+}
+
+.banner-wrapper .banner-content .logo{
+    text-align: center;
+    margin-top:1em
+}
+.banner-content .logo span{
+    font-size: 7em;
+    color:white
+}
+.banner-content .appname{
+    font-size: 3em;
+    color:white
+}
+.banner-content .banner-text{
+    font-size: 1.5em;
+    color:white;
+    text-align: center;
+}
+.bottom-component{
+    display: grid;
+    grid-template-rows: 70% 30%;
+    border-top: 1px solid white;
+    background-color: var(--dark);
+}
+
+.bottom-component .player-area{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.player-area .controls{
+    display: flex;
+    gap:30px;
+    align-items: center;
+}
+.controls button{
+    background: transparent;
+    display: grid;
+    place-content: center;
+}
+
+.controls button#volume_down{
+    transform: rotate(180deg);
+}
+
+.bottom-component .bottom-nav{
+    display: flex;
+    justify-content: space-around;
+}
+.bottom-nav .nav-item{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap:5px;
+    color:white
+}
+.bottom-nav .nav-item:hover{
+   color:var(--secondary);
+   transform: scale(1.1);
+}
+.nav-item span:first-child{
+    font-size: 2.5em;
+}
+
+.connection-wrapper{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white
+}
+.connection-wrapper .content .icon, .text, .action{
+    text-align: center;
+}
+.connection-wrapper .content .icon span{
+    font-size: 5em;
+}
+.connection-wrapper .content .action button{
+    background-color:var(--secondary);
+    border:none;
+    padding:.5em 3em;
+    border-radius: .5em;
+    margin-top: 1em;
+}
+
+
+.main-content{
+    color:white;
+    padding:.5em;
+    overflow-y: scroll;
+}
+.main-content .logo img{
+    display:block;
+    width:50%
+}
+.main-content .summery .title{
+    font-size: 2.5em;
+    color:var(--secondary)
+}
+.main-content .summery .frequency{
+    font-style: italic;
+    font-size: 1.9em;
+}
+.main-content p{
+    margin-top: 2em;
+}
+
+.main-content.with-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .content-status .icon, .label{
+    display: flex;
+    justify-content: center;
+}
+.main-content .content-status .icon span{
+    font-size: 6em;
+    margin:.4em 0
+}
+
+
+.main-content .programs{
+    color:white;
+    display: grid;
+    gap:5px;
+}
+.programs .program{
+    padding:.5em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap:20px;
+    background-color: rgb(51, 51, 51);
+    box-shadow: rgba(0,0,0,.16);
+    border-radius: .4em;
+    box-sizing: border-box;
+}
+.program .icon img{
+    display: block;
+    width:100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.program .detail .program-name{
+    color:var(--secondary);
+    font-size: 1.5em;
+}
+.program .detail .description{
+    font-size: .8em;
+    color:whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.program .detail .presenters{
+    margin: .5em 0 0 0;
+}
+.program .detail .time{
+    box-sizing: border-box;
+    font-size: .8em;
+}
